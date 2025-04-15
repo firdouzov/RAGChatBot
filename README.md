@@ -63,7 +63,7 @@ bitsandbytes
 
 1. Run the Streamlit app:
    ```bash
-   streamlit run app.py
+   streamlit run main.py
    ```
 
 2. Access the app in your browser (typically at http://localhost:8501)
