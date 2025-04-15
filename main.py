@@ -8,8 +8,6 @@ from huggingface_hub import login
 from accelerate import init_empty_weights
 from transformers import AutoModelForCausalLM
 
-# Initialize with empty weights and shard across devices
-
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     llm_int8_enable_fp32_cpu_offload=True
@@ -33,7 +31,7 @@ class ConversationalRetrievalChatbot:
         self.conversation_history = []
 
 
-        # Lightweight embedding model
+        # Embedding Model
         self.retriever_model = SentenceTransformer('all-MiniLM-L6-v2')
         self.generator_model = generator_model
         self.generator_tokenizer = generator_tokenizer
@@ -46,7 +44,7 @@ class ConversationalRetrievalChatbot:
             normalize_embeddings=True
         ).cpu().numpy()
 
-        # Efficient FAISS index
+        # FAISS index
         self.index = faiss.IndexFlatIP(self.corpus_embeddings.shape[1])
         self.index.add(self.corpus_embeddings)
 
