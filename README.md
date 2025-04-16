@@ -121,4 +121,4 @@ def translate_text(self, text, source_lang='your-source-lang', target_lang='your
 - [Meta AI](https://ai.meta.com/) for the Llama 3.1 model
 
 
-Note, I have writing readme
+Note, I hate writing readme files
