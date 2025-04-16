@@ -29,7 +29,7 @@ The chatbot consists of three main components:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/conversational-retrieval-chatbot.git
+git clone https://github.com/firdouzov/conversational-retrieval-chatbot.git
 cd conversational-retrieval-chatbot
 
 # Create a virtual environment
