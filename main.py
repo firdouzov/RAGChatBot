@@ -6,7 +6,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from deep_translator import GoogleTranslator
 from huggingface_hub import login
 from accelerate import init_empty_weights
-from transformers import AutoModelForCausalLM
+from transformers import AutoModelForCausalLM 
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
